@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+
+'''
+makes download process easy as i am finding yt videos to download
+'''
+
+
 import subprocess
 
 CODEC_EXTS = (
