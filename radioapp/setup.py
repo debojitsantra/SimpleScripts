@@ -61,7 +61,7 @@ def run_setup_wizard(reconfigure: bool = False):
     print("-- Music library --")
     while True:
         music_dir = _ask(
-            "Folder containing your music",
+            "Folder containing your music (scanned recursively for .flac files)",
             default=existing.get("music_dir", ""),
             required=True,
         )

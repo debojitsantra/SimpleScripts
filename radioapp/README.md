@@ -1,7 +1,7 @@
 # radioapp
 
-Personal radio streamer. Streams your library to Icecast as
-Source or 320kbps MP3, and can
+Personal FLAC radio streamer. Streams your library to Icecast as
+320kbps MP3, and can
 scrobble to Last.fm. Runs anywhere Python, ffmpeg, and Icecast are
 installed : Linux, macOS, Windows, or Termux/Android.
 

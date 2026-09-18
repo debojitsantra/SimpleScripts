@@ -49,6 +49,10 @@ class Song:
             return f"{self.artist} - {self.title}"
         return self.title or os.path.basename(self.path)
 
+    @property
+    def ext(self) -> str:
+        return os.path.splitext(self.path)[1].lower()
+
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS songs (
@@ -83,6 +87,7 @@ class Library:
         with self._lock:
             self.conn.close()
 
+    #write
 
     def upsert_song(self, path: str, artist: str, title: str, album: str,
                      quality_dir: str, mtime: float, duration: Optional[float]):
@@ -116,6 +121,7 @@ class Library:
                 self.conn.commit()
             return len(stale)
 
+    #read
 
     def count(self) -> int:
         with self._lock:
